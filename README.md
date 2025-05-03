@@ -1,7 +1,4 @@
 # Machine Learning App 
-```
-⬆️ (Replace above with your app's name)
-```
 
 My first Machine Learning application using Streamlit
 
