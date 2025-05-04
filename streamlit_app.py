@@ -10,10 +10,15 @@ st.info('This is an app that predicts whether you have diabetes or not by asking
 df = pd.read_csv('https://raw.githubusercontent.com/zayed95/Diabetes/refs/heads/main/diabetes.csv')
 st.header('Input Features')
 HighBP = st.toggle('High Blood Pressure')
-BMI = st.slider('BMI', 16.5, 90.0, 27.0)
+st.divider()
+BMI = st.slider('**BMI**', 16.5, 90.0, 27.0)
+st.divider()
 GenHlth = st.radio('Rate your general health with 1 being the best and 5 being the poorest', [1, 2, 3, 4, 5])
-PhysHlth = st.slider('How many days in the past month have you felt that your physical health was bad?', 0, 30, 0)
-MentHlth = st.slider('How many days in the past month have you felt that your mental health was bad?', 0, 30, 0)
+st.divider()
+PhysHlth = st.slider('How many days in the past month have you felt that your **physical health** was bad?', 0, 30, 0)
+st.divider()
+MentHlth = st.slider('How many days in the past month have you felt that your **mental health** was bad?', 0, 30, 0)
+st.divider()
 Age = st.slider('Age', 18, 80, 60)
   
 # create a data frame for the input features
