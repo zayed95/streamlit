@@ -21,8 +21,8 @@ data = {
   'HighBP': HighBP,
   'BMI': BMI,
   'GenHlth': GenHlth,
-  'PhysHlth': PhysHlth,
   'MentHlth': MentHlth,
+  'PhysHlth': PhysHlth,
   'Age': Age
 }
 input = pd.DataFrame(data, index=[0])
