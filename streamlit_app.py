@@ -31,8 +31,11 @@ input = pd.DataFrame(data, index=[0])
 y = df[['Diabetes_binary']]
 model = SVC(C=100, class_weight='balanced')
 model.fit(X, y)"""
-model = joblib.load('model.joblib')
-prediction = model.predict(input)
+@st.cache_resource
+def load_model():
+    return joblib.load("model.pkl")
+
+model = load_model()prediction = model.predict(input)
 
 """st.subheader('Diabetic')
 if prediction:
