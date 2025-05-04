@@ -9,7 +9,7 @@ st.title('Diabetese Prediction Site')
 st.info('This is an app that predicts whether you have diabetes or not by asking you a few questions about your overall mental and physical health')
 df = pd.read_csv('https://raw.githubusercontent.com/zayed95/Diabetes/refs/heads/main/diabetes.csv')
 st.header('Input Features')
-HighBP = st.toggle('High Blood Pressure')
+HighBP = int(st.toggle('High Blood Pressure'))
 st.divider()
 BMI = st.slider('**BMI**', 16.5, 90.0, 27.0)
 st.divider()
@@ -31,8 +31,6 @@ data = {
   'PhysHlth': PhysHlth,
   'Age': Age
 }
-
-
 
 @st.cache_resource
 def load_model():
