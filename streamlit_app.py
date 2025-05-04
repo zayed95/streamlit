@@ -1,12 +1,29 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+from sklearn.svm import SVC
 
 st.title('Diabetese Prediction Site')
 
 st.info('This is an app that predicts whether you have diabetes or not by asking you a few questions about your overall mental and physical health')
-
+df = pd.read_csv('https://github.com/zayed95/Diabetes/blob/c58d0f83c1098fab22215aaaf3c27b0a3f39c04f/diabetes.csv')
 with st.sidebar:
   st.header('Input Features')
   HighBP = st.toggle('High Blood Pressure')
   BMI = st.slider('BMI', 16.5, 90.0, 27.0)
   GenHlth = st.radio('Rate your general health with 1 being the best and 5 being the poorest', [1, 2, 3, 4, 5])
+  PhysHlth = st.slider('How many days in the past month have you felt that your physical health was bad?', 0, 30, 0)
+  MentHlth = st.slider('How many days in the past month have you felt that your mental health was bad?', 0, 30, 0)
+  Age = st.slider('Age', 18, 80, 60)
   
+# create a data frame for the input features
+data = {
+  'HighBP': HighBP,
+  'BMI': BMI,
+  'GenHlth': GenHlth,
+  'PhysHlth': PhysHlth,
+  'MentHlth': MentHlth,
+  'Age': Age
+}
+input = pd.DataFrame(data, index=[0])
+
