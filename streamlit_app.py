@@ -26,7 +26,7 @@ data = {
   'Age': Age
 }
 input = pd.DataFrame(data, index=[0])
-X = df[['HighBP', 'BMI', 'GenHlth', 'MentHlth', 'PhysHlth', 'Age']]
+X = df[['HighBP', 'BMI', 'GenHlth',  'PhysHlth', 'MentHlth', 'Age']]
 y = df[['Diabetes_binary']]
 model = SVC(C=100, class_weight='balanced')
 model.fit(X, y)
