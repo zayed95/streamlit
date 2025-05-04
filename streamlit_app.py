@@ -31,14 +31,19 @@ data = {
   'PhysHlth': PhysHlth,
   'Age': Age
 }
-input = pd.DataFrame(data, index=[0])
+
+
 
 @st.cache_resource
 def load_model():
     return joblib.load("model.pkl")
 
 model = load_model()
-prediction = model.predict(input)
 
-st.subheader('Prediction')
-st.success(str(prediction))  
+if st.button("Predict"):
+    input = pd.DataFrame(data, index=[0])
+    prediction = model.predict(input)[0]
+    if prediction == 1:
+        st.warning(f"Prediction: Diabetic")
+    else:
+        st.success(f"Prediction: Not Diabetic")
