@@ -6,7 +6,7 @@ from sklearn.svm import SVC
 st.title('Diabetese Prediction Site')
 
 st.info('This is an app that predicts whether you have diabetes or not by asking you a few questions about your overall mental and physical health')
-df = pd.read_csv('https://github.com/zayed95/Diabetes/blob/c58d0f83c1098fab22215aaaf3c27b0a3f39c04f/diabetes.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/zayed95/Diabetes/refs/heads/main/diabetes.csv')
 with st.sidebar:
   st.header('Input Features')
   HighBP = st.toggle('High Blood Pressure')
