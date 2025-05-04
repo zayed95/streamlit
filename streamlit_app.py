@@ -26,4 +26,15 @@ data = {
   'Age': Age
 }
 input = pd.DataFrame(data, index=[0])
+X = df[['HighBP', 'BMI', 'GenHlth', 'MentHlth', 'PhysHlth', 'Age']]
+y = df[['Diabetes_binary']]
+model = SVC(C=100, class_weight='balanced')
+model.fit(X, y)
+prediction = model.predict(input)
 
+st.subheader('Diabetic')
+if prediction:
+  print('Yes')
+else:
+  print('No')
+  
