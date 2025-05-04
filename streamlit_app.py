@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from sklearn.svm import SVC
+import joblib
+
 st.title('Diabetese Prediction Site')
 
 st.info('This is an app that predicts whether you have diabetes or not by asking you a few questions about your overall mental and physical health')
@@ -25,10 +27,11 @@ data = {
   'Age': Age
 }
 input = pd.DataFrame(data, index=[0])
-X = df[['HighBP', 'BMI', 'GenHlth',  'PhysHlth', 'MentHlth', 'Age']]
+"""X = df[['HighBP', 'BMI', 'GenHlth',  'PhysHlth', 'MentHlth', 'Age']]
 y = df[['Diabetes_binary']]
 model = SVC(C=100, class_weight='balanced')
-model.fit(X, y)
+model.fit(X, y)"""
+model = joblib.load('model.joblib')
 prediction = model.predict(input)
 
 """st.subheader('Diabetic')
