@@ -25,16 +25,15 @@ data = {
   'Age': Age
 }
 input = pd.DataFrame(data, index=[0])
-"""X = df[['HighBP', 'BMI', 'GenHlth',  'PhysHlth', 'MentHlth', 'Age']]
+X = df[['HighBP', 'BMI', 'GenHlth',  'PhysHlth', 'MentHlth', 'Age']]
 y = df[['Diabetes_binary']]
 model = SVC(C=100, class_weight='balanced')
-model.fit(X, y)"""
-model = pickle.loads(svm_model)
+model.fit(X, y)
 prediction = model.predict(input)
 
-st.subheader('Diabetic')
+"""st.subheader('Diabetic')
 if prediction:
   st.write('Yes')
 else:
-  st.write('No')
+  st.write('No')"""
   
