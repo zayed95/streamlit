@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+from sklearn.svm import SVC
 st.title('Diabetese Prediction Site')
 
 st.info('This is an app that predicts whether you have diabetes or not by asking you a few questions about your overall mental and physical health')
