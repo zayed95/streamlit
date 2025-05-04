@@ -20,7 +20,8 @@ st.divider()
 MentHlth = st.slider('How many days in the past month have you felt that your **mental health** was bad?', 0, 30, 0)
 st.divider()
 Age = st.slider('Age', 18, 80, 60)
-  
+st.divider()
+
 # create a data frame for the input features
 data = {
   'HighBP': HighBP,
@@ -39,5 +40,5 @@ def load_model():
 model = load_model()
 prediction = model.predict(input)
 
-
-  
+st.subheader('Prediction')
+st.success(str(prediction))  
