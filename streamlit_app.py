@@ -35,7 +35,8 @@ model.fit(X, y)"""
 def load_model():
     return joblib.load("model.pkl")
 
-model = load_model()prediction = model.predict(input)
+model = load_model()
+prediction = model.predict(input)
 
 """st.subheader('Diabetic')
 if prediction:
