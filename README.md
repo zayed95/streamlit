@@ -4,7 +4,7 @@ My first Machine Learning application using Streamlit
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.streamlit.app/)
+[![Streamlit App]([https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.streamlit.app/](https://app-bgypmvq6whkgv4z2sdcphu.streamlit.app/#app-name))
 
 ## GitHub Codespaces
 
