@@ -34,7 +34,7 @@ prediction = model.predict(input)
 
 st.subheader('Diabetic')
 if prediction:
-  print('Yes')
+  st.write('Yes')
 else:
-  print('No')
+  st.write('No')
   
