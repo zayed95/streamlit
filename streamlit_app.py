@@ -34,6 +34,7 @@ if 'model_test_pred' in st.session_state:
 
 # Input features
 st.header('Input Features')
+st.divider()
 HighBP = int(st.toggle('High Blood Pressure'))  # Convert boolean to 0/1
 BMI = st.slider('**BMI**', 16.5, 90.0, 27.0)
 GenHlth = st.radio('General health (1=best, 5=poorest)', [1, 2, 3, 4, 5])
